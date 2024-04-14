@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RegisterForm from "../component/RegisterForm";
+import RegisterForm from "../components/RegisterForm";
 
 export default function Register() {
   return (
