@@ -13,7 +13,15 @@ export default function Header() {
           <li>About</li>
           </Link>
           <Link to={`/sign-in`}>
+            <li>Sign In</li>
           </Link>
+          {/* <Link to={`/sign-up`}>
+            <li>
+              <button>
+
+              </button>
+            </li>
+          </Link> */}
         </ul>
       </div>
 
