@@ -19,8 +19,8 @@ const app = express();
 
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log('Server Listening on PORT 3000')
+app.listen(4000, () => {
+    console.log('Server Listening on PORT 4000')
 })
 
 app.use("/api/user", userRoutes);
