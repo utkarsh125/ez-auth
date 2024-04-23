@@ -1,15 +1,15 @@
+import { Link, useNavigate } from "react-router-dom";
 /* eslint-disable no-empty */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-
-import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -35,7 +35,7 @@ export default function SignUp() {
         setError(true);
         return;
       }
-
+      navigate('/sign-in');
       // setError(false); //after we get SUCCESS then show no error
     } catch (error) {
       //Otherwise

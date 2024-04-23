@@ -38,7 +38,7 @@ export const signin = async (req, res, next) => {
         const { password: hashedPassword, ...rest } = validUser._doc;
         // res.cookie('access_token', token, { httpOnly: true }).status(200).json(validUser);
 
-        const expiryDate = new Date(Data.now() + 360000); //THIS IS FOR ONE HOUR
+        const expiryDate = new Date(Date.now() + 360000); //THIS IS FOR ONE HOUR
         res.cookie('access_token', token, { httpOnly: true, expires: expiryDate }).status(200).json(rest);
 
     } catch (error) {
