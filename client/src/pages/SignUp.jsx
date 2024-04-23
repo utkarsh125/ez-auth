@@ -31,11 +31,11 @@ export default function SignUp() {
       const data = await res.json(); //To convert to JSON
       console.log(data);
       setLoading(false); //When the user is Signed up, stop showing loading animation
-      if(data.success === false){
+      if (data.success === false) {
         setError(true);
         return;
       }
-      
+
       // setError(false); //after we get SUCCESS then show no error
     } catch (error) {
       //Otherwise
@@ -73,8 +73,11 @@ export default function SignUp() {
           onChange={handleChange}
         />
 
-        <button disabled={loading} className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 shadow-lg">
-        {loading ? 'Loading...' : 'Sign Up'}
+        <button
+          disabled={loading}
+          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 shadow-lg"
+        >
+          {loading ? "Loading..." : "Sign Up"}
         </button>
 
         <button className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95 shadow-lg">
@@ -88,6 +91,7 @@ export default function SignUp() {
           </Link>
         </div>
         <p className="text-red-700 mt-5">{error && "Something went wrong!"}</p>
+
       </form>
     </div>
   );
