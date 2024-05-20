@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 
+import OAuth from "../components/OAuth";
+
 export default function SignUp() {
   const [formData, setFormData] = useState({});
 
@@ -80,9 +82,7 @@ export default function SignUp() {
           {loading ? "Loading..." : "Sign Up"}
         </button>
 
-        <button className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95 shadow-lg">
-          Sign Up with Google
-        </button>
+        <OAuth />
 
         <div className="flex gap-2 mt-5">
           <p>Have an account?</p>
